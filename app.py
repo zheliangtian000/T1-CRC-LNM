@@ -105,7 +105,7 @@ if model:
         try:
             prob = model.predict_proba(input_data_ordered)[0][1]
             st.markdown(
-                f'<span style="font-size:2rem;">Predicted probability of lymph node metastasis: <span style="color:red; font-weight:bold;">{prob:.2%}</span></span>',
+                f'<span style="font-size:1.3rem;">Predicted probability of lymph node metastasis: <span style="color:tomato; font-weight:bold;">{prob:.2%}</span></span>',
                 unsafe_allow_html=True
             )
             st.warning("Reminder: This result is for reference only. Please consult a medical professional for clinical decisions.")
