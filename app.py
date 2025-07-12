@@ -1,4 +1,4 @@
-import streamlit as st
+import streamlit as st 
 import joblib
 import numpy as np
 import pandas as pd
@@ -104,7 +104,10 @@ if model:
         # 预测概率并输出
         try:
             prob = model.predict_proba(input_data_ordered)[0][1]
-            st.success(f"Predicted probability of lymph node metastasis: **{prob:.2%}**")
+            st.markdown(
+                f'<span style="font-size:2rem;">Predicted probability of lymph node metastasis: <span style="color:red; font-weight:bold;">{prob:.2%}</span></span>',
+                unsafe_allow_html=True
+            )
             st.warning("Reminder: This result is for reference only. Please consult a medical professional for clinical decisions.")
         except Exception as e:
             st.error(f"An error occurred during prediction: {e}")
