@@ -49,31 +49,31 @@ if model:
     morphology = st.selectbox(
         "Morphology",
         options=[0, 1],
-        format_func=lambda x: "Non-pedunculated (0)" if x == 0 else "Pedunculated (1)"
+        format_func=lambda x: "Non-pedunculated" if x == 0 else "Pedunculated"
     )
 
     histological_grade = st.selectbox(
         "Histological grade",
         options=[1, 2],
-        format_func=lambda x: "G1 (1)" if x == 1 else "G2/G3 (2)"
+        format_func=lambda x: "Well differentiated" if x == 1 else "Moderately/Poorly differentiated"
     )
 
     depth_of_invasion = st.selectbox(
         "Depth of invasion",
         options=[0, 1],
-        format_func=lambda x: "Superficial (0)" if x == 0 else "Deep (1)"
+        format_func=lambda x: "Superficial" if x == 0 else "Deep"
     )
 
     lvi = st.selectbox(
         "Lymphovascular Invasion (LVI)",
         options=[0, 1],
-        format_func=lambda x: "Negative (0)" if x == 0 else "Positive (1)"
+        format_func=lambda x: "Negative" if x == 0 else "Positive"
     )
 
     tumor_budding = st.selectbox(
         "Tumor budding",
         options=[1, 2],
-        format_func=lambda x: "BD1 (1)" if x == 1 else "BD2/3 (2)"
+        format_func=lambda x: "BD1" if x == 1 else "BD2/3"
     )
 
     # Ki67输入，保证为整数型
