@@ -54,8 +54,8 @@ if model:
 
     histological_grade = st.selectbox(
         "Histological grade",
-        options=[1, 2],
-        format_func=lambda x: "Well differentiated" if x == 1 else "Moderately/Poorly differentiated"
+        options=[0, 1],
+        format_func=lambda x: "Well differentiated" if x == 0 else "Moderately/Poorly differentiated"
     )
 
     depth_of_invasion = st.selectbox(
@@ -72,8 +72,8 @@ if model:
 
     tumor_budding = st.selectbox(
         "Tumor budding",
-        options=[1, 2],
-        format_func=lambda x: "BD1" if x == 1 else "BD2/3"
+        options=[0, 1],
+        format_func=lambda x: "BD1" if x == 0 else "BD2/3"
     )
 
     # Ki67输入，保证为整数型
